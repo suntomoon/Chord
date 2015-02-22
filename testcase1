@@ -1,0 +1,22 @@
+addNode("129.210.16.48");
+addNode("129.210.16.128");
+insertItem("129.210.16.48", "Listen to the Music");
+insertItem("129.210.16.48", "Time to Say Goodbye");
+find("129.210.16.32", "Listen to the Music");
+deleteItem("129.210.16.48", "Listen to the Music");
+find("129.210.16.32", "Listen to the Music");
+removeNode("129.210.16.48");
+# Here is the solution
+# addNode("129.210.16.48"); returns success
+# addNode("129.210.16.128"); returns success
+# insertItem("129.210.16.48", "Listen to the Music"); returns success
+# insertItem("129.210.16.48", "Time to Say Goodbye"); returns success
+# find("129.210.16.32", "Listen to the Music"); returns success
+#   "Listen to the Music" hashed to 0x3868690b
+#   129.210.16.32 -> 129.210.16.48 (successor) -> 129.210.16.48 (finger table entry j=31)
+# deleteItem("129.210.16.48", "Listen to the Music");
+returns success
+# find("129.210.16.32", "Listen to the Music"); returns failed 
+#   "Listen to the Music" hashed to 0x3868690b
+#   129.210.16.32 -> 129.210.16.48 (successor) -> 129.210.16.48 (finger table entry j=31)
+# removeNode("129.210.16.48"); returns success
